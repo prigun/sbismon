@@ -17,7 +17,6 @@ data = {"jsonrpc" => "2.0", "protocol" => 2, "method" => "САП.Аутенти�
 req.body = data.to_json
 
 res = Net::HTTP.start(uri.hostname, uri.port) do |http|
-    http.set_debug_output($stdout)
     http.request(req)
 end
 
